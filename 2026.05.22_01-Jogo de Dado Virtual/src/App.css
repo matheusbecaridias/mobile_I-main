@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #1E1E2E; /* Cor de fundo elegante */
+  font-family: system-ui, -apple-system, sans-serif;
+  color: white;
+}
+
+.header {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #A6ADC8;
+  margin-top: 8px;
+}
+
+.center-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 0;
+}
+
+.dice-button:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.dice-image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.4));
+}
+
+/* Animação de tremor/rolagem para a Web */
+@keyframes shake {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-20deg) scale(1.1); }
+  50% { transform: rotate(20deg) scale(1.1); }
+  75% { transform: rotate(-20deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.rolling {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.result-text {
+  text-align: center;
+  margin-top: 40px;
+  color: #F38BA8;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  max-width: 400px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.reset-button {
+  background-color: #89B4FA;
+  color: #1E1E2E;
+  border: none;
+  width: 80%;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 12px rgba(137, 180, 250, 0.4);
+  transition: all 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #74a4f8;
+  transform: translateY(-2px);
+}
